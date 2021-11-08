@@ -1,0 +1,39 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment_1A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//simple interest : (principle*rate*time)/100
+		
+		double rate, loan, total, monthlyPayment; 
+		double downPayment=2000;
+		int year;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Enter the yearly interest rate: ");
+		rate=sc.nextDouble();
+		System.out.println();
+		
+		System.out.print("Enter the number of years as an integer: ");
+		year=sc.nextInt();
+		System.out.println();
+		
+		System.out.print("Enter loan amount: ");
+		loan=sc.nextDouble();
+		System.out.println();
+		
+		total = downPayment + loan + ((rate / 100) * loan * year);
+		monthlyPayment = total / (12 * year);
+		
+		System.out.println("The monthly payment is $" +monthlyPayment);
+		System.out.println("The total payment is $" +total);
+	
+
+	}
+
+}
