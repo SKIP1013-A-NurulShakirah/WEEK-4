@@ -1,0 +1,62 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment_1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        System.out.println("----------<< Welcome to C_MARTS Shooping Complex >>----------\n");
+		
+        Scanner sc=new Scanner (System.in);
+        
+		int item, q1, q2, q3;
+		double p1, p2, p3;
+		double sum1, sum2, sum3, dis, total, pay;
+		
+		
+		System.out.print("Enter the number of items: ");
+		item=sc.nextInt();
+		
+		System.out.print("Enter price of first item: RM");
+		p1=sc.nextDouble();
+		
+		System.out.print("Enter quantity of first item: ");
+		q1=sc.nextInt();
+		
+		sum1 = p1 * q1;
+		
+		System.out.print("\nEnter price of second item: RM");
+		p2=sc.nextDouble();
+		
+		System.out.print("Enter quantity of second item: ");
+		q2=sc.nextInt();
+		
+		sum2 = p2 * q2;
+		
+		System.out.print("\nEnter price of third item: RM");
+		p3=sc.nextDouble();
+		
+		System.out.print("Enter quantity of third item: ");
+		q3=sc.nextInt();
+		
+		sum3 = p3 * q3;
+		
+		total = sum1 + sum2 + sum3;
+		
+		if (total > 100) 
+			dis = total * (20/100);
+		else 
+			dis = total * (10/100); 
+		
+		pay = total - dis;
+		
+		System.out.println("\nTotal price          : RM " +total);
+		System.out.println("Discount received    : RM" +dis);
+		System.out.println("Price to be paid     : RM" +pay);
+		
+		
+	}
+
+}
